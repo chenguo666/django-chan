@@ -1,0 +1,1528 @@
+2020-10-09 09:16:39,978 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signin
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 15, in signin
+    User.objects.filter(username__exact=userName, password__exact=passWord)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 841, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 859, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1263, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1284, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1164, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1028, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1388, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: c_time, email, id, l_time, name, password, sex
+2020-10-09 09:18:04,877 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signin
+Traceback (most recent call last):
+  File "D:\django\chan\chanwebsite\login\views.py", line 15, in signin
+    user = User.objects.filter(username__exact=userName, password__exact=passWord)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 841, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 859, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1263, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1284, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1164, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1028, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1388, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: c_time, email, id, l_time, name, password, sex
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 18, in signin
+    except user.DoesNotExist:
+UnboundLocalError: local variable 'user' referenced before assignment
+2020-10-09 09:18:27,616 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signin
+Traceback (most recent call last):
+  File "D:\django\chan\chanwebsite\login\views.py", line 15, in signin
+    user = User.objects.filter(username__exact=userName, password__exact=passWord)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 841, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 859, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1263, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1284, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1164, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1028, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1388, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: c_time, email, id, l_time, name, password, sex
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 19, in signin
+    except user.DoesNotExist:
+UnboundLocalError: local variable 'user' referenced before assignment
+2020-10-09 09:20:04,949 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signin
+Traceback (most recent call last):
+  File "D:\django\chan\chanwebsite\login\views.py", line 15, in signin
+    user = User.objects.filter(username__exact=userName, password__exact=passWord)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 841, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 859, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1263, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1284, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1164, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1028, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1388, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: c_time, email, id, l_time, name, password, sex
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 23, in signin
+    except user.DoesNotExist:
+UnboundLocalError: local variable 'user' referenced before assignment
+2020-10-09 09:20:27,277 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signin
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 15, in signin
+    user = User.objects.filter(username__exact=userName, password__exact=passWord)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 841, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 859, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1263, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1284, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1164, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1028, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1388, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: c_time, email, id, l_time, name, password, sex
+2020-10-09 09:21:12,255 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signin
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 15, in signin
+    user = User.objects.filter(username=userName, password=passWord)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 841, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 859, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1263, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1284, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1164, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1028, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1388, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: c_time, email, id, l_time, name, password, sex
+2020-10-09 09:22:51,401 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signin
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 16, in signin
+    User.objects.filter(username=userName, password=passWord)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 841, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 859, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1263, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1284, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1164, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1028, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1388, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: c_time, email, id, l_time, name, password, sex
+2020-10-09 09:23:21,964 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signin
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 16, in signin
+    User.objects.get(username=userName, password=passWord)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 390, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 841, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 859, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1263, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1284, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1164, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1028, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1388, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: c_time, email, id, l_time, name, password, sex
+2020-10-09 09:25:49,746 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signin
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 21, in signin
+    if user.password == passWord:
+UnboundLocalError: local variable 'user' referenced before assignment
+2020-10-09 09:44:27,137 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signreg
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 51, in signreg
+    same_name_user = User.objects.filter(username=userName)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 841, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 859, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1263, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1284, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1164, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1028, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1388, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: c_time, email, id, l_time, name, password, sex
+2020-10-09 09:44:59,634 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signreg
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 55, in signreg
+    same_name_user = User.objects.filter(username=userName)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 841, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 859, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1263, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1284, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1164, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1028, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1388, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: c_time, email, id, l_time, name, password, sex
+2020-10-09 09:45:18,285 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signreg
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 55, in signreg
+    same_name_user = User.objects.filter(username=userName)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 841, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 859, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1263, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1284, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1164, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1028, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1388, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: c_time, email, id, l_time, name, password, sex
+2020-10-09 09:45:33,782 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signreg
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 56, in signreg
+    same_name_user = User.objects.filter(username=userName)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 841, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 859, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1263, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1284, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1164, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1028, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1388, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: c_time, email, id, l_time, name, password, sex
+2020-10-09 09:45:49,754 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signreg
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 57, in signreg
+    same_name_user = User.objects.filter(username=userName)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 841, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 859, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1263, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1284, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1164, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1028, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1388, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: c_time, email, id, l_time, name, password, sex
+2020-10-09 09:46:07,118 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signreg
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 57, in signreg
+    same_name_user = User.objects.get(username=userName)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 390, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 841, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 859, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1263, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1284, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1164, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1028, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1388, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: c_time, email, id, l_time, name, password, sex
+2020-10-09 09:46:17,978 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signreg
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 57, in signreg
+    same_name_user = User.objects.get(username=userName)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 390, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 841, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 859, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1263, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1284, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1164, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1028, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1388, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: c_time, email, id, l_time, name, password, sex
+2020-10-09 09:46:43,819 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signreg
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 58, in signreg
+    same_name_user = User.objects.get(username=userName, password=passWord)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 390, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 841, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 859, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1263, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1284, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1164, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1028, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1388, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: c_time, email, id, l_time, name, password, sex
+2020-10-09 09:51:29,829 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signreg
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 58, in signreg
+    same_name_user = User.objects.filter(username=userName)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 841, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 859, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1263, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1284, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1164, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1028, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1388, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: c_time, email, id, l_time, name, password, sex
+2020-10-09 09:58:05,704 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signreg
+Traceback (most recent call last):
+  File "D:\django\chan\chanwebsite\login\views.py", line 58, in signreg
+    same_name_user = User.objects.filter(username=userName)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 841, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 859, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1263, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1284, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1164, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1028, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1388, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: c_time, email, id, l_time, name, password, sex
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\django\chan\chanwebsite\login\views.py", line 66, in signreg
+    same_email_user = User.objects.get(email=email)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 397, in get
+    raise self.model.DoesNotExist(
+login.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry '' for key 'name'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 74, in signreg
+    new_user = User.objects.create()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 413, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 716, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 867, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '' for key 'name'")
+2020-10-09 09:58:43,185 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signreg
+Traceback (most recent call last):
+  File "D:\django\chan\chanwebsite\login\views.py", line 58, in signreg
+    same_name_user = User.objects.filter(username=userName)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 841, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 859, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1263, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1284, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1164, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1028, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1388, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: c_time, email, id, l_time, name, password, sex
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\django\chan\chanwebsite\login\views.py", line 66, in signreg
+    same_email_user = User.objects.get(email=email)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 397, in get
+    raise self.model.DoesNotExist(
+login.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry '' for key 'name'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 74, in signreg
+    new_user = User.objects.create()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 413, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 716, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 867, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '' for key 'name'")
+2020-10-09 09:59:59,851 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signreg
+Traceback (most recent call last):
+  File "D:\django\chan\chanwebsite\login\views.py", line 58, in signreg
+    same_name_user = User.objects.get(name=userName)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 397, in get
+    raise self.model.DoesNotExist(
+login.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\django\chan\chanwebsite\login\views.py", line 67, in signreg
+    same_email_user = User.objects.get(email=email)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 397, in get
+    raise self.model.DoesNotExist(
+login.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry '' for key 'name'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 75, in signreg
+    new_user = User.objects.create()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 413, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 716, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 867, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '' for key 'name'")
+2020-10-09 10:00:17,073 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signreg
+Traceback (most recent call last):
+  File "D:\django\chan\chanwebsite\login\views.py", line 58, in signreg
+    same_name_user = User.objects.get(name=userName)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 397, in get
+    raise self.model.DoesNotExist(
+login.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\django\chan\chanwebsite\login\views.py", line 68, in signreg
+    same_email_user = User.objects.get(email=email)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 397, in get
+    raise self.model.DoesNotExist(
+login.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry '' for key 'name'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 76, in signreg
+    new_user = User.objects.create()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 413, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 716, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 867, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '' for key 'name'")
+2020-10-09 10:00:36,077 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signreg
+Traceback (most recent call last):
+  File "D:\django\chan\chanwebsite\login\views.py", line 58, in signreg
+    same_name_user = User.objects.get(name=userName)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 397, in get
+    raise self.model.DoesNotExist(
+login.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\django\chan\chanwebsite\login\views.py", line 68, in signreg
+    same_email_user = User.objects.get(email=email)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 397, in get
+    raise self.model.DoesNotExist(
+login.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry '' for key 'name'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 77, in signreg
+    new_user = User.objects.create()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 413, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 716, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 867, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '' for key 'name'")
+2020-10-09 10:01:08,895 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signreg
+Traceback (most recent call last):
+  File "D:\django\chan\chanwebsite\login\views.py", line 58, in signreg
+    same_name_user = User.objects.get(name=userName)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 397, in get
+    raise self.model.DoesNotExist(
+login.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\django\chan\chanwebsite\login\views.py", line 68, in signreg
+    same_email_user = User.objects.get(email=email)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 397, in get
+    raise self.model.DoesNotExist(
+login.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry '' for key 'name'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 77, in signreg
+    new_user = User.objects.create()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 413, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 716, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 867, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '' for key 'name'")
+2020-10-09 10:03:20,678 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signreg
+Traceback (most recent call last):
+  File "D:\django\chan\chanwebsite\login\views.py", line 58, in signreg
+    same_name_user = User.objects.get(name=userName)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 397, in get
+    raise self.model.DoesNotExist(
+login.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\django\chan\chanwebsite\login\views.py", line 68, in signreg
+    same_email_user = User.objects.get(email=email)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 397, in get
+    raise self.model.DoesNotExist(
+login.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry '' for key 'name'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 77, in signreg
+    new_user = User.objects.create()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 413, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 716, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 867, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '' for key 'name'")
+2020-10-09 10:04:52,675 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/login/signreg
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry '' for key 'name'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\login\views.py", line 55, in signreg
+    new_user = User.objects.create()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 413, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 716, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 867, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '' for key 'name'")
+2020-10-09 10:17:41,897 FuncName:log_response LINE:222 [WARNING]- Not Found: /api/sys/reg
+2020-10-09 10:24:48,769 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/sys/reg
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'admin' for key 'username'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\chan\chanwebsite\backsys\sign_in_out.py", line 37, in reg
+    new_user = User.objects.create_user(username=userName,password=passWord,email=email)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\contrib\auth\models.py", line 150, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\contrib\auth\models.py", line 144, in _create_user
+    user.save(using=self._db)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\contrib\auth\base_user.py", line 73, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 716, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\base.py", line 867, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1062, "Duplicate entry 'admin' for key 'username'")
+2020-10-09 10:42:09,199 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/sys/updatasign
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 135, in _get_response
+    raise ValueError(
+ValueError: The view backsys.sign_in_out.updatasign didn't return an HttpResponse object. It returned None instead.
+2020-10-09 10:43:21,639 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/sys/updatasign
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 135, in _get_response
+    raise ValueError(
+ValueError: The view backsys.sign_in_out.updatasign didn't return an HttpResponse object. It returned None instead.
+2020-10-09 10:44:28,088 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/sys/updatasign
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 135, in _get_response
+    raise ValueError(
+ValueError: The view backsys.sign_in_out.updatasign didn't return an HttpResponse object. It returned None instead.
+2020-10-09 10:45:18,767 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/sys/updatasign
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 135, in _get_response
+    raise ValueError(
+ValueError: The view backsys.sign_in_out.updatasign didn't return an HttpResponse object. It returned None instead.
+2020-10-09 10:45:59,798 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/sys/updatasign
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 135, in _get_response
+    raise ValueError(
+ValueError: The view backsys.sign_in_out.updatasign didn't return an HttpResponse object. It returned None instead.
+2020-10-09 11:07:05,193 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/sys/artlist
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\django\chan\chanwebsite\backsys\article.py", line 16, in artlist
+    qs=qs.filter(title__contains=keywords)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 841, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 859, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1263, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1284, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1225, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1101, in build_lookup
+    raise ValueError("Cannot use None as a query value")
+ValueError: Cannot use None as a query value
+2020-10-09 11:07:45,246 FuncName:log_response LINE:222 [ERROR]- Internal Server Error: /api/sys/artlist
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\django\chan\chanwebsite\backsys\article.py", line 16, in artlist
+    qs=qs.filter(title__contains=keywords)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 841, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\query.py", line 859, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1263, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1284, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1225, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Administrator\.virtualenvs\pywork\lib\site-packages\django\db\models\sql\query.py", line 1101, in build_lookup
+    raise ValueError("Cannot use None as a query value")
+ValueError: Cannot use None as a query value
+2020-10-10 16:11:36,797 FuncName:log_response LINE:222 [WARNING]- Not Found: /
+2020-10-10 16:11:36,889 FuncName:log_response LINE:222 [WARNING]- Not Found: /favicon.ico
+2020-10-14 10:39:35,644 FuncName:log_response LINE:222 [WARNING]- Forbidden: /api/sys/docs
+2020-10-14 10:42:39,561 FuncName:log_response LINE:222 [WARNING]- Forbidden: /docs
+2020-10-14 10:43:14,498 FuncName:log_response LINE:222 [WARNING]- Forbidden: /docs
+2020-10-14 10:45:47,084 FuncName:log_response LINE:222 [WARNING]- Forbidden: /docs
+2020-10-16 11:01:38,289 FuncName:log_response LINE:222 [WARNING]- Forbidden: /docs

@@ -1,0 +1,3 @@
+tushare==1.2.60
+Django==2.1
+PyMySQL==0.9.3

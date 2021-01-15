@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/ant-design-vue-template" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cigoadmin-vue3.0" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/django vue3第一次配合" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/resume-manage-web" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vue3.0-ant2.0" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/喜帖" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/自己适配" vcs="Git" />
+  </component>
+</project>
